@@ -1,6 +1,6 @@
 // export const SOCKET_ENDPOINT = "http://localhost:3000";
-export const SOCKET_ENDPOINT = "https://socket.ismartglobal.id";
+export const SOCKET_ENDPOINT = "";
 
 export const DEFAULT_EVENT = "msg";
 
-export const DEFAULT_WA = "6285624236111";
+export const DEFAULT_WA = "";
