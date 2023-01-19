@@ -1,14 +1,14 @@
 import {io} from 'socket.io-client';
 import { getConfig } from '../config';
 
-const {SOCKET_ENDPOINT} = getConfig();
+const {SOCKET_ENDPOINT, AUTHORIZATION} = getConfig();
 
 export const socketIO = io(SOCKET_ENDPOINT, {
     extraHeaders: {
-        Authorization: "Basic aXNtYXJ0OmlTbWFydDZsb2JhbA=="
+        Authorization: AUTHORIZATION
     },
     auth: {
-        Authorization: "Basic aXNtYXJ0OmlTbWFydDZsb2JhbA=="
+        Authorization: AUTHORIZATION
     },
     path: "/socket.io/",
     transports: ["websocket"]

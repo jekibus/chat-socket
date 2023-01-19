@@ -3,6 +3,7 @@ let DEFAULT_EVENT = "msg";
 let DEFAULT_WA = "";
 let MEDIA_ENDPOINT = "";
 let API_KEY = "";
+let AUTHORIZATION = "";
 
 export const getConfig = () => {
     return {
@@ -10,7 +11,8 @@ export const getConfig = () => {
         DEFAULT_EVENT,
         DEFAULT_WA,
         MEDIA_ENDPOINT,
-        API_KEY
+        API_KEY,
+        AUTHORIZATION
     }
 }
 
@@ -20,4 +22,5 @@ export const setConfig = (config) => {
     DEFAULT_WA = config.DEFAULT_WA;
     MEDIA_ENDPOINT = config.MEDIA_ENDPOINT;
     API_KEY = config.API_KEY;
+    AUTHORIZATION = config.AUTHORIZATION;
 }
