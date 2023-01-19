@@ -7,7 +7,7 @@ import { hasConfig } from "../lib/stores";
 </script>
 
 <svelte:head>
-    <title>Socket Chat | Jekibus</title>
+    <title>Chat Socket | Jekibus</title>
     <meta name="description" content="Chat code sample using Socket.io, Svelte, and support Whatsapp API" />
 </svelte:head>
 
