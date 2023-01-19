@@ -1,8 +1,14 @@
 <script>
-import { DEFAULT_EVENT, DEFAULT_WA } from "../../config";
-import { socketIO } from "../../services/socket";
+import { onMount } from "svelte";
+import { getConfig } from "../../config";
 
 let msgInput = "";
+let socketIO;
+
+onMount(async ()=>{
+  const io = (await import("../../services/socket"));
+  socketIO = io.socketIO;
+});
 
 function onClick() {
   const msg = JSON.stringify({
@@ -10,9 +16,9 @@ function onClick() {
       body: msgInput
     },
     isMe: true,
-    wa_id: DEFAULT_WA
+    wa_id: getConfig().DEFAULT_WA
   });
-  socketIO.emit(DEFAULT_EVENT, msg);
+  socketIO.emit(getConfig().DEFAULT_EVENT, msg);
   msgInput = "";
 }
 

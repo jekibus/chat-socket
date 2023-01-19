@@ -6,17 +6,24 @@ export const demoChats = [
         isActive: true,
         lastSeen: "now",
         messages: [
-            {
-                text: {
-                    body: "Hey How are you today?"
-                }
-            },
-            {
-                text: {
-                    body: "I'm ok what about you?"
-                },
-                isMe: true,
-            },
+            // {
+            //     text: {
+            //         body: "Hey How are you today?"
+            //     }
+            // },
+            // {
+            //     text: {
+            //         body: "I'm ok what about you?"
+            //     },
+            //     isMe: true,
+            // },
+            // {
+            //     type: 'image',
+            //     image: {
+            //         id: "",
+            //         caption: "Ini image"
+            //     }
+            // }
         ]
     },
     {

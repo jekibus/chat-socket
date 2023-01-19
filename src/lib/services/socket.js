@@ -1,5 +1,7 @@
 import {io} from 'socket.io-client';
-import { SOCKET_ENDPOINT } from '../config';
+import { getConfig } from '../config';
+
+const {SOCKET_ENDPOINT} = getConfig();
 
 export const socketIO = io(SOCKET_ENDPOINT, {
     extraHeaders: {

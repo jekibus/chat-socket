@@ -1,6 +1,12 @@
+<script>
+  import { showChatList } from "../stores";
+  function onClick() {
+    $showChatList = !$showChatList;
+  }
+</script>
 <div class="flex flex-col items-center py-4 flex-shrink-0 w-20 bg-indigo-800 rounded-3xl">
-    <a href="/"
-       class="flex items-center justify-center h-12 w-12 bg-indigo-100 text-indigo-800 rounded-full">
+    <button on:click={onClick}  
+       class="flex items-center justify-center h-12 w-12 {$showChatList ? 'bg-indigo-100 text-indigo-800' : 'bg-indigo-800 text-indigo-100'} rounded-full">
       <svg class="w-8 h-8"
            fill="none"
            stroke="currentColor"
@@ -11,7 +17,7 @@
               stroke-width="2"
               d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
       </svg>
-    </a>
+    </button>
     <ul class="flex flex-col space-y-2 mt-12">
       <li>
         <a href="/"

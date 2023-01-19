@@ -1,6 +1,23 @@
-// export const SOCKET_ENDPOINT = "http://localhost:3000";
-export const SOCKET_ENDPOINT = "https://socket.ismartglobal.id";
+let SOCKET_ENDPOINT = "";
+let DEFAULT_EVENT = "msg";
+let DEFAULT_WA = "";
+let MEDIA_ENDPOINT = "";
+let API_KEY = "";
 
-export const DEFAULT_EVENT = "msg";
+export const getConfig = () => {
+    return {
+        SOCKET_ENDPOINT,
+        DEFAULT_EVENT,
+        DEFAULT_WA,
+        MEDIA_ENDPOINT,
+        API_KEY
+    }
+}
 
-export const DEFAULT_WA = "6281310746202";
+export const setConfig = (config) => {
+    SOCKET_ENDPOINT = config.SOCKET_ENDPOINT;
+    DEFAULT_EVENT = config.DEFAULT_EVENT;
+    DEFAULT_WA = config.DEFAULT_WA;
+    MEDIA_ENDPOINT = config.MEDIA_ENDPOINT;
+    API_KEY = config.API_KEY;
+}
